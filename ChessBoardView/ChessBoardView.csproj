@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConsoleController.cs" />
+    <Compile Include="ConsoleConvertor.cs" />
     <Compile Include="ConsoleValidator.cs" />
     <Compile Include="ConsoleViewer.cs" />
     <Compile Include="DefaultSettings.cs" />

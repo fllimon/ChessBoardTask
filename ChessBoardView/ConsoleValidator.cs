@@ -14,8 +14,8 @@ namespace ChessBoardView
 
             try
             {
-                int longBoard = int.Parse(firstValue);
-                int whidthBoard = int.Parse(secondValue);
+                int longBoard = ConsoleConvertor.ConvertData(firstValue);
+                int whidthBoard = ConsoleConvertor.ConvertData(secondValue);
 
                 isOk = GetValidData(longBoard, whidthBoard);
 

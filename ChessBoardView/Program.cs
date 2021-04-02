@@ -10,8 +10,16 @@ namespace ChessBoardView
     {
         static void Main(string[] args)
         {
-            
+            ConsoleValidator validator = new ConsoleValidator();
+
+            bool result = validator.GetNumberValue(args[0], args[1]);
+
             ConsoleViewer menu = new ConsoleViewer();
+
+            if (result)
+            {
+                menu.Start(ConsoleConvertor.ConvertData(args[0]), ConsoleConvertor.ConvertData(args[1]));
+            }
 
             Console.ReadKey();
         }
