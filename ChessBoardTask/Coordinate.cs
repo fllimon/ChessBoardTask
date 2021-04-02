@@ -75,7 +75,7 @@ namespace ChessBoardTask
 
         public override int GetHashCode()
         {
-            return (X | (Y << 2));
+            return (X | (Y << 2)); //ToDo: Сравнить вызов Equals << 2 или << 8
         }
     }
 }

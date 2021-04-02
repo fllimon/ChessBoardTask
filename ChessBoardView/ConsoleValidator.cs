@@ -6,10 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChessBoardView
 {
-    enum UserAction
+    class ConsoleValidator
     {
-        NoAction,
-        Start,
-        Exit
     }
 }
