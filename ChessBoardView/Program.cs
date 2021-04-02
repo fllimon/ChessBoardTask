@@ -11,16 +11,25 @@ namespace ChessBoardView
         static void Main(string[] args)
         {
             ConsoleValidator validator = new ConsoleValidator();
-
-            bool result = validator.GetNumberValue(args[0], args[1]);
-
             ConsoleViewer menu = new ConsoleViewer();
 
-            if (result)
+            try
             {
-                menu.Start(ConsoleConvertor.ConvertData(args[0]), ConsoleConvertor.ConvertData(args[1]));
-            }
+                int longBoard = DataConvertor.ConvertData(args[0]);
+                int whidthBoard = DataConvertor.ConvertData(args[1]);
 
+                bool result = validator.GetNumberValue(longBoard, whidthBoard);
+
+                if (result)
+                {
+                    menu.Start(DataConvertor.ConvertData(args[0]), DataConvertor.ConvertData(args[1]));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"{ex.Message}");
+            }
+           
             Console.ReadKey();
         }
     }

@@ -8,16 +8,13 @@ namespace ChessBoardView
 {
     class ConsoleValidator
     {
-        public bool GetNumberValue(string firstValue, string secondValue)
+        public bool GetNumberValue(int firstValue, int secondValue)
         {
             bool isOk = true;
 
             try
             {
-                int longBoard = ConsoleConvertor.ConvertData(firstValue);
-                int whidthBoard = ConsoleConvertor.ConvertData(secondValue);
-
-                isOk = GetValidData(longBoard, whidthBoard);
+                isOk = GetValidData(firstValue, secondValue);
 
                 return isOk;
             }

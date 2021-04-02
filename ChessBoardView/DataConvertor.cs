@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChessBoardView
 {
-    class ConsoleConvertor
+    class DataConvertor
     {
         public static int ConvertData(string number)
         {
