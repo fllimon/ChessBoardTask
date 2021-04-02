@@ -8,7 +8,32 @@ namespace ChessBoardView
 {
     class ConsoleValidator
     {
-        public bool GetValidData(int longBoard, int whidthBoard)
+        public bool GetNumberValue(string firstValue, string secondValue)
+        {
+            bool isOk = true;
+
+            try
+            {
+                int longBoard = int.Parse(firstValue);
+                int whidthBoard = int.Parse(secondValue);
+
+                isOk = GetValidData(longBoard, whidthBoard);
+
+                return isOk;
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine($"Incorrect parameters! {ex.Message}");
+                return isOk = false;
+            }
+            catch (ArgumentNullException ex)
+            {
+                Console.WriteLine($"Parameters not specified! {ex.Message}");
+                return isOk = false;
+            }
+        }
+
+        private bool GetValidData(int longBoard, int whidthBoard)
         {
             bool isOk = true;
 

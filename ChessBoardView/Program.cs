@@ -10,6 +10,7 @@ namespace ChessBoardView
     {
         static void Main(string[] args)
         {
+            
             ConsoleViewer menu = new ConsoleViewer();
 
             Console.ReadKey();
