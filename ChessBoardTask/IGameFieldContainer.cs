@@ -8,7 +8,7 @@ namespace ChessBoardTask
 {
     interface IGameFieldContainer
     {
-        int LongBoard { get; }
+        int HeightBoard { get; }
 
         int WhidthBoard { get; }
     }

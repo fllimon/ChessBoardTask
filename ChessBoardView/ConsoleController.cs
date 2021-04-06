@@ -36,7 +36,7 @@ namespace ChessBoardView
 
         private void Print()
         {
-            for (int i = 0; i < _gameField.LongBoard; i++)
+            for (int i = 0; i < _gameField.HeightBoard; i++)
             {
                 for (int j = 0; j < _gameField.WhidthBoard; j++)
                 {

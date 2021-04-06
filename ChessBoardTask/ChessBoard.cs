@@ -10,7 +10,7 @@ namespace ChessBoardTask
     {
         #region ======----- PRIVATE DATA ------======
 
-        private int _longBoard = -1;
+        private int _heightBoard = -1;
         private int _whidthBoard = -1;
 
         private Dictionary<Coordinate, Cell> _gameField;
@@ -21,20 +21,20 @@ namespace ChessBoardTask
 
         public ChessBoard(int longBoard, int whidthBoard)
         {
-            _longBoard = longBoard;
+            _heightBoard = longBoard;
             _whidthBoard = whidthBoard;
-            _gameField = new Dictionary<Coordinate, Cell>(_longBoard * _whidthBoard);
+            _gameField = new Dictionary<Coordinate, Cell>(_heightBoard * _whidthBoard);
         }
 
         #endregion
 
         #region =======-------- PROPERTIES ---------========
 
-        public int LongBoard
+        public int HeightBoard
         {
             get
             {
-                return _longBoard;
+                return _heightBoard;
             }
         }
 

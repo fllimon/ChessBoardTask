@@ -21,11 +21,13 @@ namespace ChessBoardView
             catch (FormatException ex)
             {
                 Console.WriteLine($"Incorrect parameters! {ex.Message}");
+
                 return isOk = false;
             }
             catch (ArgumentNullException ex)
             {
                 Console.WriteLine($"Parameters not specified! {ex.Message}");
+
                 return isOk = false;
             }
         }
