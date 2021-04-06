@@ -43,7 +43,7 @@ namespace ChessBoardTask
 
         private bool IsEvenValue(int x, int y)
         {
-            return (((x + y) % 2) == 0);
+            return (((x + y) % DefaultSettings.DEVIDER) == 0);
         }
 
         public void Run()
