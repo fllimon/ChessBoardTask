@@ -12,7 +12,7 @@ namespace ChessBoardView
     {
         #region =======------- PRIVATE DATA --------=========
 
-        private readonly ChessBoard _gameField;
+        private readonly IGameFieldContainer _gameField;
         private readonly ChessBoardController _gameFieldController;
 
         #endregion
@@ -23,7 +23,7 @@ namespace ChessBoardView
                                         int whidthBoard = DefaultSettings.DEFAULT_BOARD_WHIDTH)
         {
             _gameField = new ChessBoard(longBoard, whidthBoard);
-            _gameFieldController = new ChessBoardController(_gameField);
+            _gameFieldController = new ChessBoardController((ChessBoard)_gameField);
         }
 
         #endregion

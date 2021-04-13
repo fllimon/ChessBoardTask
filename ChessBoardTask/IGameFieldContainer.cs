@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace ChessBoardTask
 {
-    interface IGameFieldContainer
+    public interface IGameFieldContainer
     {
         int HeightBoard { get; }
 
         int WhidthBoard { get; }
+
+        DefaultImage this[Coordinate position] { get; }
     }
 }

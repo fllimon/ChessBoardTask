@@ -55,5 +55,8 @@
   <ItemGroup>
     <Folder Include="Interface\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="ChessDiagram.cd" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
