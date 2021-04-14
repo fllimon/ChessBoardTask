@@ -10,8 +10,8 @@ namespace ChessBoardTask
     {
         #region ======------- CTOR -------=======
 
-        public WhiteCell(ChessBoard gameField, Coordinate position)
-            : base(gameField, position)
+        public WhiteCell(Coordinate position)
+            : base(position)
         {
 
         }

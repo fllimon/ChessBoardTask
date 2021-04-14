@@ -31,11 +31,11 @@ namespace ChessBoardTask
                 {
                     if (IsEvenValue(i, j))
                     {
-                        _gameField.Add(new WhiteCell(_gameField, new Coordinate(i, j)));
+                        _gameField.Add(new WhiteCell(new Coordinate(i, j)));
                     }
                     else
                     {
-                        _gameField.Add(new BlackCell(_gameField, new Coordinate(i, j)));
+                        _gameField.Add(new BlackCell(new Coordinate(i, j)));
                     }
                 }
             }

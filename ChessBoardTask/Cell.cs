@@ -11,20 +11,18 @@ namespace ChessBoardTask
         #region ======------ PRIVATE DATA -------=======
 
         private readonly Coordinate _coordinate;
-        private readonly IGameFieldContainer _gameField;
-
+        
         #endregion
 
         #region =======-------- CTOR -------======
 
-        public Cell(ChessBoard gameField, Coordinate coordinate)
+        public Cell(Coordinate coordinate)
         {
-            _gameField = gameField;
             _coordinate = coordinate;
         }
 
-        public Cell(ChessBoard gameField, int x, int y)
-            : this(gameField, new Coordinate(x, y))
+        public Cell( int x, int y)
+            : this(new Coordinate(x, y))
         {
 
         }
