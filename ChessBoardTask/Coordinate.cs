@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace ChessBoardTask
 {
-    public class Coordinate
+    public struct Coordinate
     {
         #region ========-------- PRIVATE DATA --------==========
 
-        private int _x = -1;
-        private int _y = -1;
+        private int _x;
+        private int _y;
 
         #endregion
 
@@ -61,21 +61,9 @@ namespace ChessBoardTask
 
         #endregion
 
-        public override bool Equals(object obj)
-        {
-            Coordinate someObj = obj as Coordinate;
-
-            if (someObj == null)
-            {
-                return false;
-            }
-
-            return ((X == someObj.X) && (Y == someObj.Y));
-        }
-
         public override int GetHashCode()
         {
-            return (X | (Y << DefaultSettings.BIT_SHIFT_LEFT));
+            return new Tuple<int, int>(_x, _y).GetHashCode();
         }
     }
 }
