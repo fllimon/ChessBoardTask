@@ -6,17 +6,17 @@ using System.Threading.Tasks;
 
 namespace ChessBoardTask
 {
-    public class ChessBoardController
+    class ChessBoardController : IChessBoardStart
     {
         #region ======------ PRIVATE DATA --------=======
 
-        private readonly ChessBoard _gameField;
+        private readonly IGameFieldContainer _gameField;
 
         #endregion
 
         #region =======------- CTOR --------========
 
-        public ChessBoardController(ChessBoard gameField)
+        public ChessBoardController(IGameFieldContainer gameField)
         {
             _gameField = gameField;
         }

@@ -13,24 +13,26 @@ namespace ChessBoardView
         #region =======------- PRIVATE DATA --------=========
 
         private readonly IGameFieldContainer _gameField;
-        private readonly ChessBoardController _gameFieldController;
-
+        private readonly IChessBoard _gameFieldController;
+        private readonly IChessBoardStart _runChessBoard;
+        
         #endregion
 
         #region =======------ CTOR -------===========
 
-        public ConsoleController(int longBoard = DefaultSettings.DEFAULT_BOARD_LONG,
+        public ConsoleController(int heightBoard = DefaultSettings.DEFAULT_BOARD_LONG,
                                         int whidthBoard = DefaultSettings.DEFAULT_BOARD_WHIDTH)
         {
-            _gameField = new ChessBoard(longBoard, whidthBoard);
-            _gameFieldController = new ChessBoardController((ChessBoard)_gameField);
+            _gameFieldController = new ChessBoardInitializer();
+            _gameField = _gameFieldController.InitializeGameField(heightBoard, whidthBoard);
+            _runChessBoard = _gameFieldController.InitializeGameFieldController(_gameField);
         }
 
         #endregion
 
         public void RunApplication()
         {
-            _gameFieldController.Run();
+            _runChessBoard.Run();
             Print();
         }
 

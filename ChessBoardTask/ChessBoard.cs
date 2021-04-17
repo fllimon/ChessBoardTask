@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ChessBoardTask
 {
-    public class ChessBoard : IGameFieldContainer
+    class ChessBoard : IGameFieldContainer
     {
         #region ======----- PRIVATE DATA ------======
 

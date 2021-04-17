@@ -61,9 +61,5 @@ namespace ChessBoardTask
 
         #endregion
 
-        public override int GetHashCode()
-        {
-            return new Tuple<int, int>(_x, _y).GetHashCode();
-        }
     }
 }

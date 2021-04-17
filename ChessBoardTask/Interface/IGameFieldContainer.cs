@@ -13,5 +13,7 @@ namespace ChessBoardTask
         int WhidthBoard { get; }
 
         DefaultImage this[Coordinate position] { get; }
+
+        void Add(Cell entity);
     }
 }
