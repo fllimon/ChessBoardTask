@@ -15,14 +15,14 @@ namespace ChessBoardView
 
             try
             {
-                int longBoard = DataConvertor.ConvertData(args[0]);
+                int heightBoard = DataConvertor.ConvertData(args[0]);
                 int whidthBoard = DataConvertor.ConvertData(args[1]);
 
-                bool result = validator.GetNumberValue(longBoard, whidthBoard);
+                bool result = validator.GetNumberValue(heightBoard, whidthBoard);
 
                 if (result)
                 {
-                    menu.Start(DataConvertor.ConvertData(args[0]), DataConvertor.ConvertData(args[1]));
+                    menu.Start(heightBoard, whidthBoard);
                 }
             }
             catch (Exception ex)

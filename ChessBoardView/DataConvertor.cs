@@ -10,7 +10,15 @@ namespace ChessBoardView
     {
         public static int ConvertData(string number)
         {
-            return int.Parse(number);
+            try
+            {
+                return int.Parse(number);
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine(ex.Message);
+                throw;
+            }
         }
     }
 }
