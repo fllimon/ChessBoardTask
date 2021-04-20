@@ -55,9 +55,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WhiteCell.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <None Include="ChessDiagram.cd" />
+    <None Include="ChessBoardDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

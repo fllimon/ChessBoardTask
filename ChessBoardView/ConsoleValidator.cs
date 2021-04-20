@@ -34,7 +34,7 @@ namespace ChessBoardView
 
         private bool IsNotCorrectValue(int longBoard, int whidthBoard)
         {
-            return ((longBoard < 2) && (whidthBoard < 2));
+            return ((longBoard > 2) && (whidthBoard > 2));
         }
     }
 }

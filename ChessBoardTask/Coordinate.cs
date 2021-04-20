@@ -61,5 +61,25 @@ namespace ChessBoardTask
 
         #endregion
 
+        public override bool Equals(object obj)
+        {
+            Coordinate someObj;
+
+            if (!(obj is Coordinate))
+            {
+                return false;
+            }
+            else
+            {
+                someObj = (Coordinate)obj;
+            }
+
+            return ((X == someObj.X) && (Y == someObj.Y));
+        }
+
+        public override int GetHashCode()
+        {
+            return new Tuple<int, int>(_x, _y).GetHashCode();
+        }
     }
 }
