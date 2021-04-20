@@ -14,7 +14,7 @@ namespace ChessBoardView
 
             try
             {
-                isOk = GetValidData(firstValue, secondValue);
+                isOk = IsNotCorrectValue(firstValue, secondValue);
 
                 return isOk;
             }
@@ -32,21 +32,9 @@ namespace ChessBoardView
             }
         }
 
-        private bool GetValidData(int longBoard, int whidthBoard)
-        {
-            bool isOk = true;
-
-            if (IsNotCorrectValue(longBoard, whidthBoard))
-            {
-                return isOk = false;
-            }
-
-            return isOk;
-        }
-
         private bool IsNotCorrectValue(int longBoard, int whidthBoard)
         {
-            return ((longBoard < 2) || (whidthBoard < 2));
+            return ((longBoard < 2) && (whidthBoard < 2));
         }
     }
 }
